@@ -75,15 +75,20 @@ console.log(resul);
 
 
 function IBM (peso, altura) {
-    calcu=peso / altura**2;
+
+    peso > 1 && peso < 250 && altura > 0.30 && altura < 3
+    ? calcu = peso / altura**2
+    : alert('Estamos fuera del rango, peso entre 1 y 150 kilitos, altura entre 0.30 y 3 metros')
+    window.location.reload();
+
     if (calcu < 18.5) {
-        console.log("Bajo de peso (Desnutrido)");
+        alert("Bajo de peso (Desnutrido)");
     } else if (calcu >= 18.5 && calcu <25) {
-        console.log("disque Normal");
+        alert("disque Normal");
     } else if (calcu >= 25 && calcu <30) {
-        console.log("Sobrepeso (Gordis)");
+        alert("Sobrepeso (Gordis)");
     }else {
-        console.log("Obeso (Regorgis)");
+        alert("Obeso (Regorgis)");
     }
 }
 
